@@ -33,6 +33,7 @@
         </StackPanel>
  
         <!-- Door Opening -->
+    <!--
 <StackPanel Grid.Row="2" Margin="0,5">
 <TextBlock Text="Door Opening" />
             <ComboBox x:Name="PodSizeComboBox" Width="200" Margin="0,2">
@@ -41,7 +42,7 @@
                 <ComboBoxItem Content="Size C"/>
             </ComboBox>
         </StackPanel>
- 
+ -->
         <!-- Shaft Size -->
 <StackPanel Grid.Row="3" Margin="0,5">
 <TextBlock Text="Shaft Size" />
