@@ -1,0 +1,78 @@
+﻿<Window x:Class="PodDesignPlugin.xaml.PODui"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="POD Configuration" Height="500" Width="400">
+    <Grid Margin="10,10,10,6">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="200"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- POD Types -->
+        <StackPanel Margin="0,5">
+            <TextBlock Text="POD Types" />
+            <ComboBox x:Name="PodTypeComboBox" Width="200" Margin="0,2">
+                <ComboBoxItem Content="Type A"/>
+                <ComboBoxItem Content="Type B"/>
+                <ComboBoxItem Content="Type C"/>
+                <ComboBoxItem Content="Type D"/>
+            </ComboBox>
+        </StackPanel>
+
+        <!-- POD Size -->
+        <StackPanel Grid.Row="1" Margin="0,5">
+            <TextBlock Text="POD Sizes" />
+            <ComboBox x:Name="PodSizeComboBox" Width="200" Margin="0,2">
+                <ComboBoxItem Content="Size A"/>
+                <ComboBoxItem Content="Size B"/>
+                <ComboBoxItem Content="Size C"/>
+                <ComboBoxItem Content="Size D"/>
+            </ComboBox>
+        </StackPanel>
+
+        <!-- Door Opening -->
+        <StackPanel Grid.Row="2" Margin="0,5">
+            <TextBlock Text="Door Openings" />
+            <ComboBox x:Name="DoorOpeningComboBox" Width="200" Margin="0,2">
+                <ComboBoxItem Content="Door Opening A"/>
+                <ComboBoxItem Content="Door Opening B"/>
+            </ComboBox>
+        </StackPanel>
+
+        <!-- Shaft Size -->
+        <StackPanel Grid.Row="3" Margin="0,5">
+            <TextBlock Text="Shaft Openings" />
+            <ComboBox x:Name="ShaftOpeningComboBox" Width="200" Margin="0,2">
+                <ComboBoxItem Content="Shaft Opening A"/>
+                <ComboBoxItem Content="Shaft Opening B"/>
+            </ComboBox>
+        </StackPanel>
+
+        <!-- Preview -->
+        <Border Grid.Row="4" BorderBrush="Black" BorderThickness="1" CornerRadius="10" Margin="0,10">
+            <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBlock Text="Preview" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Grid>
+        </Border>
+
+        <!-- Buttons -->
+        <StackPanel Grid.Row="5" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10">
+            <Button Content="Download" Width="80" Margin="5" Click="Download_Click"/>
+            <Button Content="Cancel" Width="80" Margin="5" Click="Cancel_Click"/>
+        </StackPanel>
+
+        <!-- Logo -->
+        <Image Source="pack://application:,,,/Resource/PNC logo.png"
+       Width="60" Height="30"
+       HorizontalAlignment="Right"
+       VerticalAlignment="Bottom"
+       Margin="0,0,10,10"
+       Grid.Row="5"/>
+
+
+    </Grid>
+</Window>

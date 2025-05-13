@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<RevitAddIns>
+    <AddIn Type="Application">
+        <Name>PodDesignPlugin</Name>
+        <Assembly>"PodDesignPlugin.dll"</Assembly>
+        <AddInId>7D245877-7653-49DE-9495-4663AFF8B628</AddInId>
+        <FullClassName>PodDesignPlugin.PodDesignApp</FullClassName>
+        <Issuer>Sreraam Akshay</Issuer>
+        <VendorId>PNC Architects</VendorId>
+        <VendorDescription>Sreraam Akshay - Pod Design</VendorDescription>
+    </AddIn>
+</RevitAddIns>
