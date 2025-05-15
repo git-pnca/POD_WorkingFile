@@ -5,13 +5,14 @@ using Autodesk.Revit.Attributes;
 namespace PodDesignPlugin // << This must match the FullClassName used in App.cs
 {
     [Transaction(TransactionMode.Manual)]
-    public class MaidLCommand : IExternalCommand
+    public class podDesign : IExternalCommand
     {
         public Result Execute(ExternalCommandData commandData, ref string message, ElementSet elements)
         {
-            MaidLWindow window = new MaidLWindow();
+            PODui window = new PODui();
             window.ShowDialog();
             return Result.Succeeded;
         }
     }
 }
+
