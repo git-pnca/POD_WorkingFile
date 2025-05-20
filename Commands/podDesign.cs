@@ -1,6 +1,7 @@
 ﻿using Autodesk.Revit.UI;
 using Autodesk.Revit.DB;
 using Autodesk.Revit.Attributes;
+using System.Diagnostics;
 
 namespace PodDesignPlugin // << This must match the FullClassName used in App.cs
 {
@@ -13,6 +14,9 @@ namespace PodDesignPlugin // << This must match the FullClassName used in App.cs
             window.ShowDialog();
             return Result.Succeeded;
         }
+
+       
+
     }
 }
 

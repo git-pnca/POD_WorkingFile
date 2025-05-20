@@ -150,8 +150,8 @@
   <ItemGroup>
     <Compile Include="App.cs" />
     <Compile Include="Commands\podDesign.cs" />
+    <Compile Include="Commands\requestForm.cs" />
     <Compile Include="Commands\ShowerQueryCommand.cs" />
-    <Compile Include="ACC\Crendentials.cs" />
     <Compile Include="POD Design Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -164,6 +164,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resource\req20Icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Resource Include="Resource\PNC logo.png" />
     <Resource Include="Resource\Requesticon.png" />
     <Resource Include="Resource\S22A2.png" />
@@ -186,7 +189,7 @@
     <Resource Include="Resource\S41B2.png" />
     <Resource Include="Resource\S42A2.png" />
     <Resource Include="Resource\S42B2.png" />
-    <Resource Include="Resource\PodDesignicon.png" />
+    <Content Include="Resource\modular20Icon.png" />
     <Content Include="PodDesignPlugin.addin" />
   </ItemGroup>
   <ItemGroup>
