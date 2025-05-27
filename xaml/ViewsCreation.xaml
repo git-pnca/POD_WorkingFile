@@ -1,0 +1,46 @@
+﻿<Window x:Class="PodDesignPlugin.ViewsCreation"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="View Creator | PNCA® Tools" Height="400" Width="500">
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="3*" />
+        </Grid.ColumnDefinitions>
+
+        <!-- Left Side -->
+        <StackPanel Grid.Column="1">
+            <RadioButton x:Name="rbLevelWise" Content="By Level Wise" Margin="5"/>
+            <RadioButton x:Name="rbSelectedLevels" Content="By Selected Levels" Margin="5"/>
+            <ListBox x:Name="levelListBox" Height="200" Margin="5" />
+           
+        </StackPanel>
+
+        <StackPanel Grid.Column="1">
+            <Image x:Name="PNCLogo" Source="C:\Users\mohammad.chouhan\Downloads\OneDrive_2025-05-13\Pod Design\Pod\Resource\PNC logo.png"  Width="50" Height="50" Margin="5,300" HorizontalAlignment="Right"/>
+        </StackPanel>
+
+        <!-- Right Side -->
+        <StackPanel Grid.Column="0">
+            <TextBlock Text="View Type" Margin="5"/>
+            <ComboBox x:Name="viewTypeComboBox" Margin="5"/>
+
+            <TextBlock Text="Discipline" Margin="5"/>
+            <ComboBox x:Name="disciplineComboBox" Margin="5"/>
+
+            <TextBlock Text="Sub-Discipline" Margin="5"/>
+            <ComboBox x:Name="subDisciplineComboBox" Margin="5" IsEditable="True" IsReadOnly="False"/>
+
+            <TextBlock Text="View Scale" Margin="5"/>
+            <ComboBox x:Name="scaleComboBox" Margin="5"/>
+
+            <TextBlock Text="Number of Views to Create" Margin="5"/>
+            <TextBox x:Name="viewCountTextBox" Margin="5"/>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="5">
+                <Button Content="OK" Width="75" Click="OK_Click" Margin="5,20"/>
+                <Button Content="Cancel" Width="75" Height="20" Click="Cancel_Click" Margin="5,20"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

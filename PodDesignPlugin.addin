@@ -7,6 +7,9 @@
         <FullClassName>PodDesignPlugin.PodDesignApp</FullClassName>
         <Issuer>PNC Architects</Issuer>
         <VendorId>PNC Architects</VendorId>
-        <VendorDescription>PNCA - POD Designer</VendorDescription>
+        <VendorDescription>PNC Architects Design Automation Team</VendorDescription>
     </AddIn>
+	
 </RevitAddIns>
+
+

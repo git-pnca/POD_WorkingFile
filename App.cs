@@ -18,17 +18,23 @@ namespace PodDesignPlugin
             {
                 application.CreateRibbonTab(tabName);
             }
+
             catch { /* Tab might already exist, ignore */ }
 
             // For First Button - POD Designer
 
-            RibbonPanel panel1 = application.CreateRibbonPanel(tabName, "POD Designer");
+            RibbonPanel panel1 = application.CreateRibbonPanel(tabName, "POD Downloader");
 
             string dllPath1 = Assembly.GetExecutingAssembly().Location;
             string iconPath1 = Path.Combine(Path.GetDirectoryName(dllPath1), "modular20Icon.png");
             string iconPath2 = Path.Combine(Path.GetDirectoryName(dllPath1), "req20Icon.png");
+            string iconPath3 = Path.Combine(Path.GetDirectoryName(dllPath1), "view20Icon.png");
 
-            // For second button - Request Form
+
+
+            // For second button - Views Manager
+
+            RibbonPanel panel2 = application.CreateRibbonPanel(tabName, "View Manager");
 
 
 
@@ -44,6 +50,12 @@ namespace PodDesignPlugin
             if (File.Exists(iconPath2))
             {
                 iconImage2 = new BitmapImage(new Uri(iconPath2, UriKind.Absolute));
+            }
+
+            ImageSource iconImage3 = null;
+            if (File.Exists(iconPath3))
+            {
+                iconImage3 = new BitmapImage(new Uri(iconPath3, UriKind.Absolute));
             }
 
 
@@ -74,6 +86,18 @@ namespace PodDesignPlugin
             };
 
             PushButton requestButton = panel1.AddItem(requestBtn) as PushButton;
+
+            PushButtonData viewBtn = new PushButtonData(
+                "View Button",
+                "Views Creation",
+                dllPath1,
+                "PodDesignPlugin.ViewsCreation")
+            {
+                ToolTip = "Create Views for Model as per the disciplines",
+                LargeImage = iconImage3
+            };
+
+            PushButton vBtn = panel2.AddItem(viewBtn) as PushButton;
 
 
             return Result.Succeeded;

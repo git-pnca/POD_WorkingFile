@@ -152,6 +152,7 @@
     <Compile Include="Commands\podDesign.cs" />
     <Compile Include="Commands\requestForm.cs" />
     <Compile Include="Commands\ShowerQueryCommand.cs" />
+    <Compile Include="Commands\ViewsCreation.cs" />
     <Compile Include="POD Design Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,11 +163,15 @@
     <Compile Include="xaml\PODui.xaml.cs">
       <DependentUpon>PODui.xaml</DependentUpon>
     </Compile>
+    <Compile Include="xaml\ViewsCreation.xaml.cs">
+      <DependentUpon>ViewsCreation.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resource\req20Icon.png">
+    <Resource Include="Resource\view20Icon.png" />
+    <Resource Include="Resource\req20Icon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    </Resource>
     <Resource Include="Resource\PNC logo.png" />
     <Resource Include="Resource\Requesticon.png" />
     <Resource Include="Resource\S22A2.png" />
@@ -194,6 +199,10 @@
   </ItemGroup>
   <ItemGroup>
     <Page Include="xaml\PODui.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="xaml\ViewsCreation.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
